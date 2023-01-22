@@ -65,7 +65,7 @@ jobs:
         with:
           name: 'lib-${{ matrix.os }}-${{ matrix.cmake_arch }}'
           # A file, directory or wildcard pattern that describes what to upload
-          path: '${{ github.workspace }}/build/src/Release/cubeb.dll'
+          path: '${{ github.workspace }}/build/Release/cubeb.dll'
           if-no-files-found: error
           
       - name: Upload Binary as Artifact (macOS)
@@ -74,7 +74,7 @@ jobs:
         with:
           name: 'lib-${{ matrix.os }}-${{ matrix.cmake_arch }}'
           # A file, directory or wildcard pattern that describes what to upload
-          path: '${{ github.workspace }}/build/src/libcubeb.dylib'
+          path: '${{ github.workspace }}/build/libcubeb.dylib'
           if-no-files-found: error
           
   package:
