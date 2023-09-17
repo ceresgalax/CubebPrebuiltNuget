@@ -21,6 +21,10 @@
             <PackagePath>runtimes/win-x64/native/cubeb.dll</PackagePath>
             <Pack>true</Pack>
         </Content>
+        <Content Include="win-x64\cubeb.lib">
+            <PackagePath>runtimes/win-x64/native/cubeb.lib</PackagePath>
+            <Pack>true</Pack>
+        </Content>
 
         <Content Include="Cubeb.targets">
             <PackagePath>build/net45/</PackagePath>
