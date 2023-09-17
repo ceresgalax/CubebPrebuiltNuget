@@ -65,7 +65,7 @@ jobs:
         with:
           name: 'lib-${{ matrix.os }}-${{ matrix.cmake_arch }}'
           # A file, directory or wildcard pattern that describes what to upload
-          path: '${{ github.workspace }}/build/Release/cubeb.dll'
+          path: '${{ github.workspace }}/build/Release/cubeb/'
           if-no-files-found: error
           
       - name: Upload Binary as Artifact (macOS)
@@ -99,6 +99,7 @@ jobs:
         run: |
           cd "${GITHUB_WORKSPACE}"
           ls -R artifacts
+          cp "artifacts/lib-windows-latest-default/cubeb.lib" "win-x64/cubeb.lib"
           cp "artifacts/lib-windows-latest-default/cubeb.dll" "win-x64/cubeb.dll"
           cp "artifacts/lib-macOS-12-x86_64/libcubeb.dylib" "osx-x64/libcubeb.dylib"
           cp "artifacts/lib-macOS-12-arm64/libcubeb.dylib" "osx-arm64/libcubeb.dylib"
