@@ -4,7 +4,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <Description>Just the binaries of cubeb</Description>
         <RepositoryUrl>https://github.com/ceresgalax/CubebPrebuiltNuget</RepositoryUrl>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
         <PackageId>CeresCubeb-native</PackageId>
     </PropertyGroup>
 
