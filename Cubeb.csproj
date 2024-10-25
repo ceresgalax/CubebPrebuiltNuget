@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.Build.NoTargets/3.7.56">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework> <!-- Needs .NET 5 since we don't include an MSBuild targets file for the native libraries. -->
         <Description>Just the binaries of cubeb</Description>
         <RepositoryUrl>https://github.com/ceresgalax/CubebPrebuiltNuget</RepositoryUrl>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
         <PackageId>CeresCubeb-native</PackageId>
     </PropertyGroup>
 
@@ -26,11 +26,10 @@
             <Pack>true</Pack>
         </Content>
 
-        <Content Include="Cubeb.targets">
+        <!-- <Content Include="Cubeb.targets">
             <PackagePath>build/net45/</PackagePath>
             <Pack>true</Pack>
-        </Content>
-
+        </Content> -->
     </ItemGroup>
 
 </Project>
