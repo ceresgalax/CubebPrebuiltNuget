@@ -104,7 +104,7 @@ jobs:
           cp "artifacts/lib-macOS-12-x86_64/libcubeb.dylib" "osx-x64/libcubeb.dylib"
           cp "artifacts/lib-macOS-12-arm64/libcubeb.dylib" "osx-arm64/libcubeb.dylib"
           dotnet --version
-          dotnet pack -c Release
+          dotnet pack -c Release Cubeb.csproj
           cp "${GITHUB_WORKSPACE}/bin/Release"/CeresCubeb-native.*.nupkg "${GITHUB_WORKSPACE}/bin/Release/CeresCubeb-native.nupkg"
 
       - name: Upload Package as Artifact
